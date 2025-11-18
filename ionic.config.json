@@ -1,0 +1,7 @@
+{
+  "name": "Convo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
