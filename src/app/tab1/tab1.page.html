@@ -4,7 +4,7 @@
     <!-- Left: Avatar + Name + Status -->
     <div class="profile-left">
       <ion-avatar class="profile-avatar">
-        <img src="assets/images/827.jpg" alt="User" />
+        <img src="assets/images/888.png" alt="User" />
       </ion-avatar>
 
       <div class="profile-text">
@@ -12,30 +12,69 @@
         <div class="profile-status">
           <ion-icon name="briefcase-outline"></ion-icon>
           <span>At work</span>
+          <!-- Right: Search + Menu -->
+          <div class="btn">
+            <!-- <ion-button fill="clear">
+              <ion-icon name="search-outline"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear">
+              <ion-icon name="ellipsis-vertical"></ion-icon>
+            </ion-button> -->
+            <span>
+              <ion-icon name="search-outline"></ion-icon>
+            </span>
+            <span>
+              <ion-icon name="ellipsis-vertical"></ion-icon>
+            </span>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Right: Search + Menu -->
-    <ion-buttons slot="end" class="profile-actions">
-      <ion-button fill="clear">
-        <ion-icon name="search-outline"></ion-icon>
-      </ion-button>
-      <ion-button fill="clear">
-        <ion-icon name="ellipsis-vertical"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-     <div class="chat">
-       <h1>Chat</h1>
+
+    <div class="chat">
+      <h1>Chat</h1>
       <span>12</span>
-     </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row>
+<ion-content class="chat-content">
+  <ion-segment>
+    <ion-segment-button value="first" content-id="first">
+      <ion-label>All</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="second" content-id="second">
+      <ion-label>Unread</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="third" content-id="third">
+      <ion-label>Groups</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Fourth" content-id="Fourth">
+      <ion-label>New</ion-label>
+    </ion-segment-button>
+  </ion-segment>
 
-    </ion-row>
-  </ion-grid>
+  <ion-segment-view>
+    <ion-segment-content id="first">
+      <div class="profile">
+        <div class="img">
+          <img src="assets/images/888.png" alt="">
+        </div>
+       <div class="name">
+         <h5>Arshad Khan</h5>
+        <p>How are you?</p>
+       </div>
+       <div class="time">
+         <span>10:24 AM</span>
+         <small>5</small>
+       </div>
+      </div>
+    </ion-segment-content>
+
+    <ion-segment-content id="second" class="ion-text-center">Second</ion-segment-content>
+    <ion-segment-content id="third" class="ion-text-center">Third</ion-segment-content>
+    <ion-segment-content id="Fourth" class="ion-text-center">Fourth</ion-segment-content>
+  </ion-segment-view>
+
 </ion-content>
