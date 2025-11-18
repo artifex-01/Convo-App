@@ -1,17 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar class="profile-toolbar">
+
+    <!-- Left: Avatar + Name + Status -->
+    <div class="profile-left">
+      <ion-avatar class="profile-avatar">
+        <img src="assets/images/827.jpg" alt="User" />
+      </ion-avatar>
+
+      <div class="profile-text">
+        <div class="profile-name">John Doe</div>
+        <div class="profile-status">
+          <ion-icon name="briefcase-outline"></ion-icon>
+          <span>At work</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Search + Menu -->
+    <ion-buttons slot="end" class="profile-actions">
+      <ion-button fill="clear">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+     <div class="chat">
+       <h1>Chat</h1>
+      <span>12</span>
+     </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    </ion-row>
+  </ion-grid>
 </ion-content>

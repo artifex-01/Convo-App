@@ -1,1 +1,59 @@
+ion-tab-bar {
+  --background: #ffffff;
+  border-radius: 24px;
+  margin: 0 16px 16px;
+  padding: 8px 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* base style for all buttons */
+ion-tab-button {
+  --background: transparent;
+  --color: #000000;
+  --color-selected: #ffffff;
+  border-radius: 18px;
+  min-height: 52px;
+  position: relative;
+}
+
+/* selected = filled black pill, white icon and text */
+ion-tab-button.tab-selected {
+  --background: #000000;
+  --color: #ffffff;
+}
+
+/* only show label on selected tab */
+ion-tab-button:not(.tab-selected) ion-label {
+  display: none;
+}
+
+/* keep icon + dot together */
+.tab-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* red notification dot */
+.badge-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff3b30;
+}
+
+/* smooth edges & icon size similar to screenshot */
+ion-tab-button ion-icon {
+  font-size: 22px;
+}
+
+ion-tab-button ion-label {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
 
